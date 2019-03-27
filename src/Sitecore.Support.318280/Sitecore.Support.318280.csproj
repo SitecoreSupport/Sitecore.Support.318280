@@ -54,17 +54,28 @@
       <HintPath>..\packages\WFFM.Sitecore.Forms.Core.8.2.7\lib\Sitecore.Forms.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Sitecore.Mvc.8.2.7\lib\Sitecore.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.System.Web.Mvc.8.2.7\lib\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms.Mvc.ViewModels.Fields\DateField.cs" />
+    <Compile Include="Forms.Mvc\Controllers\FormController.cs" />
+    <Compile Include="Forms.Mvc\Routes\InitializeRoutes.cs" />
+    <Compile Include="Forms.Mvc\ViewModels.Fields\DateField.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\zzz\Sitecore.Support.318280.config" />
     <None Include="packages.config" />
     <None Include="web.config" />
   </ItemGroup>
