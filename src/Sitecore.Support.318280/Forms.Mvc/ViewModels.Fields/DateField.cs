@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sitecore.Forms.Mvc.Attributes;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
@@ -18,6 +19,25 @@ namespace Sitecore.Support.Forms.Mvc.ViewModels.Fields
 
       Thread.CurrentThread.CurrentCulture = currentCulture;
 
+    }
+
+    [ParameterName("SelectedDate")]
+    public override string Value
+    {
+      get
+      {
+        return base.Value;
+      }
+      set
+      {
+
+        CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+        Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+
+        base.Value = value;
+
+        Thread.CurrentThread.CurrentCulture = currentCulture;
+      }
     }
   }
 }
